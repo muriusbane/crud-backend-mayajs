@@ -23,4 +23,8 @@ export class TodoServices {
   async updateTodo(_id: string, body: any) {
     return await this.model.findOneAndUpdate({ _id }, body, {new: true});
   }
+
+  async deleteTodo(_id: string) {
+    return await this.model.findOneAndDelete({ _id });
+  }
 }

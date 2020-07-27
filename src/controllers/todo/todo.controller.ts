@@ -32,5 +32,11 @@ export class SampleController {
     const id = req.params.id;
     res.json(await this.services.updateTodo(id, req.body));
   }
+
+  @Delete({ path: "/:id" })
+  async deleteTodo(req: Request, res: Response, next: NextFunction): Promise<void> {
+    const id = req.params.id;
+    res.json(await this.services.deleteTodo(id));
+  }
   
 }
