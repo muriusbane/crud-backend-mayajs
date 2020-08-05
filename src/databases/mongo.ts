@@ -1,10 +1,11 @@
 import { Mongo } from "@mayajs/mongo";
-import test from "../controllers/todo/todo.model";
+import todos from "../controllers/todo/todos.model";
 
 export = Mongo({
   name: "test",
-  connectionString: "mongodb+srv://muriusbane:root@cluster0.7ispv.mongodb.net/test?retryWrites=true&w=majority",
+  connectionString:
+    "mongodb+srv://root:root@mayajs.6izmq.mongodb.net/test?authSource=admin&replicaSet=atlas-dbtreq-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true",
   schemas: [
-    test, // Add Mongoose Schema here
+    todos, // Add Mongoose Schema here
   ],
 });

@@ -1,8 +1,8 @@
-import { SampleController } from "./controllers/todo/todo.controller";
+import { TodosController } from "./controllers/todo/todos.controller";
 
 export const routes = [
   {
-    controllers: [SampleController],
+    controllers: [TodosController],
     middlewares: [],
     path: "",
   },
